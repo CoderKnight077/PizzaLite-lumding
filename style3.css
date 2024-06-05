@@ -1,0 +1,510 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+
+
+    /* box-sizing: border-box; */
+}
+
+
+
+
+nav {
+
+
+    background-color: black;;
+
+    display: flex;
+
+    /* justify-content: space-between; */
+
+    position: relative;
+
+    align-items: center;
+
+    padding: 40px;
+
+    flex-direction: column;
+
+    /* align-items: center; */
+
+}
+
+/* style3.css */
+
+/* Existing CSS rules */
+
+/* ... */
+
+#pdf.animate {
+  animation: growShrinkAnimation 2s infinite;
+}
+
+@keyframes growShrinkAnimation {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.2);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+
+button {
+
+  transition:  transform 1s easy-in-out;
+}
+
+
+
+
+
+
+h5 {
+
+  color: white;
+
+
+}
+
+@keyframes colorTransition {
+  0% { color: blue; }
+  50% { color: red; }
+  100% { color: green; }
+}
+
+.important-link {
+
+  color: blue;
+  text-decoration: none;
+  display: block;
+  font-size: large;
+  animation: colorTransition 5s infinite;
+
+
+
+}
+
+.important-link:hover {
+  background-color: transparent;
+
+}
+
+
+
+.MCQ  {
+
+     /* justify-content: center;
+     align-items: center; */
+    margin: auto;
+    display: block;
+    text-align: center;
+    border: 4px solid rgb(216, 4, 4);
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    background-color: #030007;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+a.MCQ {
+  color: rgb(255, 123, 0);
+}
+
+
+#id {
+  color: black;
+}
+
+
+
+
+a {
+    color: rgb(241, 207, 9);
+
+    text-decoration: none;
+
+    display: block;
+
+    font-size: large;
+}
+
+.MathMcq  {
+  color: blue;
+}
+a:hover {
+
+    background-color:  rgb(240, 236, 17);
+
+}
+
+/* a:visited {
+
+  background-color:  lightcoral;
+} */
+
+
+
+.nav-menu-links {
+
+    text-align: center;
+
+    padding: 12px;
+}
+
+
+.toggler {
+
+    position: absolute;
+
+    right: 20px;
+}
+
+ul {
+
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+
+
+.nav-Links {
+    display: none;
+}
+.nav-Links.active  {
+
+    display: block;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search input {
+    padding: 8px;
+    margin-right: 5px;
+}
+
+
+.link-container a {
+  color: darkblue;
+  font-weight: bold;
+  padding: 2px;
+  /* text-decoration: underline; */
+}
+
+/* .nav-search button {
+    background-color: rgba(125, 9, 235, 0.884);
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+} */
+
+h1 {
+    justify-content: center;
+    align-items: center;
+   
+}
+ /* Default styling for the links */
+ .link-container {
+  display: flex;
+
+  color: blue;
+  justify-content: space-between;
+  margin-top: 10px;
+
+ }
+    /* Media query for smaller screens (max-width: 500px) */
+@media screen and (max-width: 700px) {
+  .link-container {
+    flex-wrap: wrap;
+
+  }
+
+  /* Set width to 48% for each link in the column to keep only two in a row */
+  .link-container a {
+    width: 48%;
+    box-sizing: border-box; /* Include padding and borders in the width calculation */
+    margin-bottom: 10px; /* Add margin between links */
+  }
+
+  /* Change the order of the last link to move it to the bottom */
+  .link-container a:last-child {
+    order: 2;
+    width: 100%; /* Ensure full width for the last link in the column */
+
+
+  }
+}
+
+
+@media screen  and (min-width : 600px ) {
+
+
+    .nav-Links {
+
+        display: flex;
+    }
+
+
+
+
+
+    nav {
+
+        background-color: black;
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        /* align-self: center; */
+    }
+
+
+     ul {
+        flex-direction: row;
+
+        align-items: center;
+     }
+
+
+     .banner {
+
+        align-items: flex-start;
+    }
+
+    .toggler {
+
+        display : none;
+    }
+}
+
+.matric {
+    border: 2px solid black;
+    background-color: rgb(78, 11, 233);
+    text-align: center;
+    box-shadow: 10px 10px 20px #d8681d;
+    animation: colorTransition 5s infinite;
+   
+}
+
+.formula {
+    /* justify-content: center;
+    align-items: center; */
+    text-align: center;
+    
+    color: blue;
+    /* border: 1px solid black; */
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+    /* Styles for screens up to 400px width */
+    .columns {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .nav-Links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-Links.active {
+        display: flex;
+    }
+
+    .nav-menu-links {
+        padding: 8px;
+    }
+
+    nav {
+        padding: 15px;
+    }
+}
+
+#pdf {
+
+  color: blue;
+  flex-shrink: 8;
+  padding: 6px;
+  box-shadow: 5px 5px 10px #d8cc1d;
+  animation: colorTransition 5s infinite;
+
+
+
+}
+
+.pdfNotes  {
+
+  border: 4px solid black;
+  border-radius: 10px;
+  margin-left: 10px;
+  display: block;
+  animation: colorTransition 5s infinite;
+}
+
+/* Existing CSS */
+
+/* ... */
+
+
+/* ... */
+
+
+/* h1 {
+
+    padding: 50px;
+    margin-left: 70px;
+} */
+
+h2 {
+
+    align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  color: white;
+
+}
+
+#color {
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    background-color: yellow;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+
+}
+
+.wrapper {
+
+    padding: 5px;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    /* display: grid; */
+}
+
+.columns {
+
+     display: flex;
+     /* grid-template-columns: 1fr , 1fr, 1 fr; */
+    flex-flow: row wrap  ;
+    justify-content : center;
+
+    margin: 5px 0;
+
+}
+
+#mcq {
+  color: black;
+    border: 2px solid black;
+    background-color: rgb(240, 166, 7);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+
+}
+
+.column {
+
+    flex: 2;
+    border: 1px solid #ccc;
+
+    /* grid-template-columns: 1fr , 1fr, 1 fr; */
+   gap: 20px;
+    margin: 0px;
+    padding: 0px;
+
+
+    transition: 0.3s;
+
+
+}
+
+
+.MindGrade {
+    color: rgb(209, 231, 9);
+}
+
+
+a.question {
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
+
+.question {
+    color: black;
+    font-weight: bolder;
+}
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+    .columns {
+        flex-direction: column;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .nav-Links {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-Links.active {
+        display: flex;
+    }
+
+    .nav-menu-links {
+        padding: 8px;
+    }
+
+    nav {
+        padding: 15px;
+    }
+}
+
+.black    {
+
+  color: black;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.sutro  {
+
+  color:  yellow;
+}
