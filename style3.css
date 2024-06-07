@@ -508,3 +508,131 @@ a.question {
 
   color:  yellow;
 }
+
+
+/* adding body css############################################################################ */
+
+header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #d6bef7;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+    /* display: none; */
+    visibility: hidden;
+}
+@media (max-width: 1024px) {
+    .header {
+        visibility: visible;
+    }
+}
+header a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    background-color: #c9f81e;
+    border-radius: 3px;
+}
+.bannerr {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.bannerr img {
+    max-width: 100%;
+    width: 80rem;
+    height: auto;
+    background-size: auto 100%;
+}
+.bash{
+    padding: 50px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.bash h2{
+  top: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 4px;
+}
+
+.bash button {
+  margin-top: 10rem;
+  position: absolute;
+  padding: 15px 15px;
+  background-color: #f05f40; 
+  color: white; 
+  border: none; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+.section-title {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f8f4f4;
+    
+    font-size: 2rem;
+    border: none; 
+    border-radius: 20px;
+}
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #fff;
+}
+.item {
+    width: 30%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+.people-choice {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #fff;
+}
+.people-choice img {
+    width: 48%;
+    height: auto;
+}
+@media (max-width: 1024px) {
+    .item {
+        width: 30%;
+    }
+}
+@media (max-width: 768px) {
+
+    .item {
+        width: 48%;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        visibility: visible;
+    }
+    .items {
+        flex-direction: row;
+        align-items: center;
+    }
+    .item, .people-choice img {
+        width: 80%;
+    }
+}
