@@ -1,4 +1,3 @@
-
 * {
     font-family: "Roboto", sans-serif;
     margin: 0;
@@ -9,21 +8,23 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: -2s linear;
-  }
-  
-  html {
+}
+
+html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-padding-top: 9rem;
     scroll-behavior: smooth;
-  }
-body{
+}
+
+body {
     overflow-y: scroll;
 }
 
 body::-webkit-scrollbar {
     display: none;
 }
+
 nav {
     background-color: black;
     display: flex;
@@ -36,46 +37,50 @@ nav {
     z-index: 1000;
     overflow: hidden;
 }
+
 #pdf.animate {
-  animation: growShrinkAnimation 2s infinite;
+    animation: growShrinkAnimation 2s infinite;
 }
 
 @keyframes growShrinkAnimation {
-  0% {
-      transform: scale(1);
-  }
-  50% {
-      transform: scale(1.2);
-  }
-  100% {
-      transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 button {
-  transition:  transform 1s easy-in-out;
+    transition: transform 1s easy-in-out;
 }
 
 h5 {
-  color: white;
+    color: white;
 }
 
 @keyframes colorTransition {
-  0% { color: blue; }
-  50% { color: red; }
-  100% { color: green; }
+    0% { color: blue; }
+    50% { color: red; }
+    100% { color: green; }
 }
+
 .important-link {
-  color: blue;
-  text-decoration: none;
-  display: block;
-  font-size: large;
-  animation: colorTransition 5s infinite;
+    color: blue;
+    text-decoration: none;
+    display: block;
+    font-size: large;
+    animation: colorTransition 5s infinite;
 }
+
 .important-link:hover {
-  background-color: transparent;
+    background-color: transparent;
 }
-.MCQ  {
+
+.MCQ {
     margin: auto;
     display: block;
     text-align: center;
@@ -88,44 +93,51 @@ h5 {
     border-radius: 10px;
     cursor: pointer;
 }
+
 a.MCQ {
-  color: rgb(255, 123, 0);
+    color: rgb(255, 123, 0);
 }
+
 #id {
-  color: black;
+    color: black;
 }
+
 a {
     color: rgb(241, 207, 9);
     text-decoration: none;
     display: block;
     font-size: large;
 }
-.MathMcq  {
-  color: blue;
+
+.MathMcq {
+    color: blue;
 }
+
 a:hover {
-    background-color:  rgb(240, 236, 17);
+    background-color: rgb(240, 236, 17);
 }
+
 .nav-menu-links {
-
     text-align: center;
-
     padding: 12px;
 }
+
 .toggler {
     position: absolute;
     right: 60px;
 }
+
 ul {
     list-style: none;
     display: flex;
     flex-direction: column;
 }
+
 .nav-Links {
     display: none;
 }
 
-.nav-Links.active  {
+.nav-Links.active {
     display: block;
 }
 
@@ -140,43 +152,44 @@ ul {
 }
 
 .link-container a {
-  color: darkblue;
-  font-weight: bold;
-  padding: 2px;
+    color: darkblue;
+    font-weight: bold;
+    padding: 2px;
 }
 
 h1 {
     justify-content: center;
     align-items: center;
-   
 }
- .link-container {
-  display: flex;
-  color: blue;
-  justify-content: space-between;
-  margin-top: 10px;
 
- }
+.link-container {
+    display: flex;
+    color: blue;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 700px) {
-  .link-container {
-    flex-wrap: wrap;
-  }
+    .link-container {
+        flex-wrap: wrap;
+    }
 
-  .link-container a {
-    width: 48%;
-    box-sizing: border-box; 
-    margin-bottom: 10px; 
-  }
+    .link-container a {
+        width: 48%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
 
-  .link-container a:last-child {
-    order: 2;
-    width: 100%; 
-  }
+    .link-container a:last-child {
+        order: 2;
+        width: 100%;
+    }
 }
-@media screen  and (min-width : 600px ) {
+
+@media screen and (min-width: 600px) {
     .nav-Links {
         display: flex;
-        overflow: hidden; 
+        overflow: hidden;
     }
     nav {
         position: relative;
@@ -186,17 +199,15 @@ h1 {
         justify-content: space-between;
         position: fixed;
     }
-     ul {
+    ul {
         flex-direction: row;
         align-items: center;
-     }
-     .banner {
-
+    }
+    .banner {
         align-items: flex-start;
     }
     .toggler {
-
-        display : none;
+        display: none;
     }
 }
 
@@ -209,11 +220,10 @@ h1 {
 }
 
 .formula {
-    align-items: center; */
+    align-items: center;
     text-align: center;
     color: blue;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
 
 @media screen and (max-width: 400px) {
@@ -231,7 +241,6 @@ h1 {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        
     }
     .nav-Links.active {
         display: flex;
@@ -239,31 +248,29 @@ h1 {
     .nav-menu-links {
         padding: 8px;
     }
-
 }
 
 #pdf {
-  color: blue;
-  flex-shrink: 8;
-  padding: 6px;
-  box-shadow: 5px 5px 10px #d8cc1d;
-  animation: colorTransition 5s infinite;
+    color: blue;
+    flex-shrink: 8;
+    padding: 6px;
+    box-shadow: 5px 5px 10px #d8cc1d;
+    animation: colorTransition 5s infinite;
 }
 
-.pdfNotes  {
-  border: 4px solid black;
-  border-radius: 10px;
-  margin-left: 10px;
-  display: block;
-  animation: colorTransition 5s infinite;
+.pdfNotes {
+    border: 4px solid black;
+    border-radius: 10px;
+    margin-left: 10px;
+    display: block;
+    animation: colorTransition 5s infinite;
 }
 
 h2 {
-  align-items: center;
-  justify-content: center;
-  margin-left: 5px;
-  color: white;
-
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    color: white;
 }
 
 #color {
@@ -285,14 +292,14 @@ h2 {
 }
 
 .columns {
-     display: flex;
-    flex-flow: row wrap  ;
-    justify-content : center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     margin: 5px 0;
 }
 
 #mcq {
-  color: black;
+    color: black;
     border: 2px solid black;
     background-color: rgb(240, 166, 7);
     justify-content: center;
@@ -324,6 +331,7 @@ a.question {
     color: black;
     font-weight: bolder;
 }
+
 @media screen and (min-width: 200px) and (max-width: 600px) {
     .columns {
         flex-direction: column;
@@ -348,14 +356,14 @@ a.question {
     }
 }
 
-.black    {
-  color: black;
-  font-weight: bold;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.black {
+    color: black;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.sutro  {
-  color:  yellow;
+.sutro {
+    color: yellow;
 }
 
 /* adding body css############################################################################ */
@@ -365,12 +373,9 @@ header {
     display: flex;
     justify-content: space-around;
     background-color: #d6bef7;
-    /* padding: 10px 0px; */?
     border-bottom: 1px solid #ddd;
     font-weight: 600;
-    /* padding: 1px; */
     visibility: hidden;
-    
 }
 
 header a {
@@ -399,7 +404,7 @@ header a {
     background-size: auto 100%;
 }
 
-.bash{
+.bash {
     padding: 50px;
     position: absolute;
     display: flex;
@@ -407,34 +412,33 @@ header a {
     gap: 5px;
 }
 
-.bash h2{
-  top: 20px;
-  left: 20px;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 4px;
+.bash h2 {
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 4px;
 }
 
 .bash button {
-  margin-top: 10rem;
-  position: absolute;
-  padding: 15px 15px;
-  background-color: #f05f40; 
-  color: white; 
-  border: none; 
-  border-radius: 5px;
-  cursor: pointer;
+    margin-top: 10rem;
+    position: absolute;
+    padding: 15px 15px;
+    background-color: #f05f40;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
-
-    .bash button{
+    .bash button {
         margin-top: 8rem;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .bash button{
+    .bash button {
         margin-top: 8rem;
     }
 }
@@ -444,84 +448,90 @@ header a {
     padding: 20px 0;
     background-color: #f8f4f4;
     font-size: 2rem;
-    border: none; 
+    border: none;
     border-radius: 20px;
 }
 
 @media screen and (max-width: 768px) {
-    .section-title{
-        font-size: 1.2rem;
-    }
-}
-@media screen and (max-width: 480px) {
-    .section-title{
+    .section-title {
         font-size: 1.2rem;
     }
 }
 
-.menu-box{
+@media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 1.2rem;
+    }
+}
+
+.menu-box {
     padding: 5px 0px 51px 0px;
     margin: 0rem 2rem 0rem 2rem;
 }
-@media screen and (max-width: 1080px){
-    .menu-box{
-        padding: 15px 1px 51px 1px;
-        margin: 0rem 1rem 0rem 1rem;
-    }
-}
-@media screen and (max-width:768px){
-    .menu-box{
-        padding: 15px 1px 51px 1px;
-        margin: 0rem 1rem 0rem 1rem;
-    }
-}
-@media screen and (max-width: 480px){
-    .menu-box{
 
+@media screen and (max-width: 1080px) {
+    .menu-box {
         padding: 15px 1px 51px 1px;
         margin: 0rem 1rem 0rem 1rem;
     }
 }
 
+@media screen and (max-width: 768px) {
+    .menu-box {
+        padding: 15px 1px 51px 1px;
+        margin: 0rem 1rem 0rem 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu-box {
+        padding: 15px 1px 51px 1px;
+        margin: 0rem 1rem 0rem 1rem;
+    }
+}
 
 .items {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     background-color: #fff;
-
 }
+
 .item {
     width: 30%;
     margin-bottom: 15px;
     text-align: center;
-    /* background-color: #f1ff30; */
     border-radius: 10px;
 }
+
 .item img {
-    width: 81%;
+    width: 80%;
     height: auto;
     border-radius: 50%;
-    margin-top: 11px;
+    margin-top: 21px;
 }
-.item p{
+
+.item p {
     font-weight: 600;
     font-size: 3rem;
 }
-@media screen and (max-width: 1080px){
-    .item p{
+
+@media screen and (max-width: 1080px) {
+    .item p {
         font-weight: 500;
         font-size: 1rem;
     }
 }
-@media screen and (max-width:768px){
-    .item p{
+
+@media screen and (max-width: 768px) {
+    .item p {
         font-weight: 500;
         font-size: 1rem;
     }
 }
-@media screen and (max-width: 480px){
-    .item p{
+
+@media screen and (max-width: 480px) {
+    .item p {
         font-weight: 500;
         font-size: 1rem;
     }
@@ -534,28 +544,31 @@ header a {
     background-color: #fff;
     overflow: hidden;
 }
+
 .people-choice img {
     width: 48%;
     height: auto;
 }
+
 @media screen and (max-width: 1024px) {
     .item {
         width: 30%;
     }
 }
-@media screen and (max-width: 768px) {
 
+@media screen and (max-width: 768px) {
     .item {
         width: 48%;
         background-color: white;
     }
 }
-@media screen and (max-width: 480px) {
 
+@media screen and (max-width: 480px) {
     .item {
         background-color: white;
     }
 }
+
 @media screen and (max-width: 480px) {
     header {
         position: relative;
@@ -563,17 +576,17 @@ header a {
         text-align: center;
         visibility: visible;
     }
-    
+
     .items {
         flex-direction: row;
         align-items: center;
-        
     }
+
     .item .people-choice img {
         width: 80%;
     }
-    
 }
+
 @media screen and (max-width: 768px) {
     header {
         position: relative;
@@ -581,13 +594,14 @@ header a {
         text-align: center;
         visibility: visible;
     }
-    
+
     .items {
         flex-direction: row;
         align-items: center;
     }
-    .item, .people-choice img {
+
+    .item,
+    .people-choice img {
         width: 80%;
     }
 }
-
