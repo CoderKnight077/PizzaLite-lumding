@@ -1,44 +1,41 @@
+
 * {
-
+    font-family: "Roboto", sans-serif;
     margin: 0;
-
     padding: 0;
-
-
-
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: -2s linear;
+  }
+  
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+  }
+body{
+    overflow-y: scroll;
 }
 
-
-
-
+body::-webkit-scrollbar {
+    display: none;
+}
 nav {
-
-
-    background-color: black;;
-
+    background-color: black;
     display: flex;
-
-    /* justify-content: space-between; */
-
-    position: relative;
-
-    align-items: center;
-
-    padding: 40px;
-
     flex-direction: column;
-
-    /* align-items: center; */
-
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
 }
-
-/* style3.css */
-
-/* Existing CSS rules */
-
-/* ... */
-
 #pdf.animate {
   animation: growShrinkAnimation 2s infinite;
 }
@@ -55,22 +52,12 @@ nav {
   }
 }
 
-
 button {
-
   transition:  transform 1s easy-in-out;
 }
 
-
-
-
-
-
 h5 {
-
   color: white;
-
-
 }
 
 @keyframes colorTransition {
@@ -78,30 +65,17 @@ h5 {
   50% { color: red; }
   100% { color: green; }
 }
-
 .important-link {
-
   color: blue;
   text-decoration: none;
   display: block;
   font-size: large;
   animation: colorTransition 5s infinite;
-
-
-
 }
-
 .important-link:hover {
   background-color: transparent;
-
 }
-
-
-
 .MCQ  {
-
-     /* justify-content: center;
-     align-items: center; */
     margin: auto;
     display: block;
     text-align: center;
@@ -113,79 +87,45 @@ h5 {
     font-family: 'Times New Roman', Times, serif;
     border-radius: 10px;
     cursor: pointer;
-
 }
-
 a.MCQ {
   color: rgb(255, 123, 0);
 }
-
-
 #id {
   color: black;
 }
-
-
-
-
 a {
     color: rgb(241, 207, 9);
-
     text-decoration: none;
-
     display: block;
-
     font-size: large;
 }
-
 .MathMcq  {
   color: blue;
 }
 a:hover {
-
     background-color:  rgb(240, 236, 17);
-
 }
-
-/* a:visited {
-
-  background-color:  lightcoral;
-} */
-
-
-
 .nav-menu-links {
 
     text-align: center;
 
     padding: 12px;
 }
-
-
 .toggler {
-
     position: absolute;
-
-    right: 20px;
+    right: 60px;
 }
-
 ul {
-
     list-style: none;
-
     display: flex;
-
     flex-direction: column;
 }
-
-
-
-
 .nav-Links {
     display: none;
 }
-.nav-Links.active  {
 
+.nav-Links.active  {
     display: block;
 }
 
@@ -199,97 +139,61 @@ ul {
     margin-right: 5px;
 }
 
-
 .link-container a {
   color: darkblue;
   font-weight: bold;
   padding: 2px;
-  /* text-decoration: underline; */
 }
-
-/* .nav-search button {
-    background-color: rgba(125, 9, 235, 0.884);
-    color: white;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-} */
 
 h1 {
     justify-content: center;
     align-items: center;
    
 }
- /* Default styling for the links */
  .link-container {
   display: flex;
-
   color: blue;
   justify-content: space-between;
   margin-top: 10px;
 
  }
-    /* Media query for smaller screens (max-width: 500px) */
 @media screen and (max-width: 700px) {
   .link-container {
     flex-wrap: wrap;
-
   }
 
-  /* Set width to 48% for each link in the column to keep only two in a row */
   .link-container a {
     width: 48%;
-    box-sizing: border-box; /* Include padding and borders in the width calculation */
-    margin-bottom: 10px; /* Add margin between links */
+    box-sizing: border-box; 
+    margin-bottom: 10px; 
   }
 
-  /* Change the order of the last link to move it to the bottom */
   .link-container a:last-child {
     order: 2;
-    width: 100%; /* Ensure full width for the last link in the column */
-
-
+    width: 100%; 
   }
 }
-
-
 @media screen  and (min-width : 600px ) {
-
-
     .nav-Links {
-
         display: flex;
+        overflow: hidden; 
     }
-
-
-
-
-
     nav {
-
+        position: relative;
         background-color: black;
         flex-direction: row;
-
         align-items: center;
-
         justify-content: space-between;
-
-        /* align-self: center; */
+        position: fixed;
     }
-
-
      ul {
         flex-direction: row;
-
         align-items: center;
      }
-
-
      .banner {
 
         align-items: flex-start;
     }
-
     .toggler {
 
         display : none;
@@ -302,66 +206,51 @@ h1 {
     text-align: center;
     box-shadow: 10px 10px 20px #d8681d;
     animation: colorTransition 5s infinite;
-   
 }
 
 .formula {
-    /* justify-content: center;
-    align-items: center; */
+    align-items: center; 
     text-align: center;
-    
     color: blue;
-    /* border: 1px solid black; */
     font-family: Arial, Helvetica, sans-serif;
     
 }
 
-
-
-
 @media screen and (max-width: 400px) {
-    /* Styles for screens up to 400px width */
+    nav {
+        position: relative;
+        overflow: hidden;
+    }
     .columns {
         flex-direction: column;
     }
-
     .column {
         width: 100%;
     }
-
     .nav-Links {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        
     }
-
     .nav-Links.active {
         display: flex;
     }
-
     .nav-menu-links {
         padding: 8px;
     }
 
-    nav {
-        padding: 15px;
-    }
 }
 
 #pdf {
-
   color: blue;
   flex-shrink: 8;
   padding: 6px;
   box-shadow: 5px 5px 10px #d8cc1d;
   animation: colorTransition 5s infinite;
-
-
-
 }
 
 .pdfNotes  {
-
   border: 4px solid black;
   border-radius: 10px;
   margin-left: 10px;
@@ -369,23 +258,8 @@ h1 {
   animation: colorTransition 5s infinite;
 }
 
-/* Existing CSS */
-
-/* ... */
-
-
-/* ... */
-
-
-/* h1 {
-
-    padding: 50px;
-    margin-left: 70px;
-} */
-
 h2 {
-
-    align-items: center;
+  align-items: center;
   justify-content: center;
   margin-left: 5px;
   color: white;
@@ -401,27 +275,20 @@ h2 {
     align-items: center;
     text-align: center;
     border-radius: 30px;
-
 }
 
 .wrapper {
-
     padding: 5px;
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    /* display: grid; */
 }
 
 .columns {
-
      display: flex;
-     /* grid-template-columns: 1fr , 1fr, 1 fr; */
     flex-flow: row wrap  ;
     justify-content : center;
-
     margin: 5px 0;
-
 }
 
 #mcq {
@@ -432,30 +299,20 @@ h2 {
     align-items: center;
     text-align: center;
     width: 100%;
-
 }
 
 .column {
-
     flex: 2;
     border: 1px solid #ccc;
-
-    /* grid-template-columns: 1fr , 1fr, 1 fr; */
-   gap: 20px;
+    gap: 20px;
     margin: 0px;
     padding: 0px;
-
-
     transition: 0.3s;
-
-
 }
-
 
 .MindGrade {
     color: rgb(209, 231, 9);
 }
-
 
 a.question {
     color: black;
@@ -467,66 +324,55 @@ a.question {
     color: black;
     font-weight: bolder;
 }
-
 @media screen and (min-width: 200px) and (max-width: 600px) {
     .columns {
         flex-direction: column;
     }
-
     .column {
         width: 100%;
     }
-
     .nav-Links {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
-
     .nav-Links.active {
         display: flex;
     }
-
     .nav-menu-links {
         padding: 8px;
     }
-
     nav {
+        position: relative;
         padding: 15px;
     }
 }
 
 .black    {
-
   color: black;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
-
 }
 
 .sutro  {
-
   color:  yellow;
 }
-
 
 /* adding body css############################################################################ */
 
 header {
+    position: absolute;
     display: flex;
     justify-content: space-around;
     background-color: #d6bef7;
-    padding: 10px 0;
+    
     border-bottom: 1px solid #ddd;
     font-weight: 600;
-    /* display: none; */
+    /* padding: 1px; */
     visibility: hidden;
+    
 }
-@media (max-width: 1024px) {
-    .header {
-        visibility: visible;
-    }
-}
+
 header a {
     text-decoration: none;
     color: #333;
@@ -534,6 +380,7 @@ header a {
     background-color: #c9f81e;
     border-radius: 3px;
 }
+
 .bannerr {
     position: relative;
     display: flex;
@@ -542,14 +389,16 @@ header a {
     text-align: center;
     padding: 20px;
     background-color: #f0f0f0;
+    margin-top: 5rem;
 }
 
 .bannerr img {
     max-width: 100%;
-    width: 80rem;
+    width: 70rem;
     height: auto;
     background-size: auto 100%;
 }
+
 .bash{
     padding: 50px;
     position: absolute;
@@ -557,6 +406,7 @@ header a {
     flex-direction: column;
     gap: 5px;
 }
+
 .bash h2{
   top: 20px;
   left: 20px;
@@ -575,59 +425,164 @@ header a {
   border-radius: 5px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+
+    .bash button{
+        margin-top: 8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bash button{
+        margin-top: 8rem;
+    }
+}
+
 .section-title {
     text-align: center;
     padding: 20px 0;
     background-color: #f8f4f4;
-    
     font-size: 2rem;
     border: none; 
     border-radius: 20px;
 }
+
+@media screen and (max-width: 768px) {
+    .section-title{
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .section-title{
+        font-size: 1.2rem;
+    }
+}
+
+.menu-box{
+    padding: 5px 84px 51px 80px;
+    margin: 0rem 11rem 0rem 11rem;
+}
+@media screen and (max-width: 1080px){
+    .menu-box{
+        padding: 15px 19px 51px 17px;
+        margin: 0rem 1rem 0rem 1rem;
+    }
+}
+@media screen and (max-width:768px){
+    .menu-box{
+        padding: 15px 19px 51px 17px;
+        margin: 0rem 1rem 0rem 1rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .menu-box{
+
+        padding: 15px 19px 51px 17px;
+        margin: 0rem 1rem 0rem 1rem;
+
+    }
+}
+
+
 .items {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
-    padding: 10px;
     background-color: #fff;
+
 }
 .item {
     width: 30%;
     margin-bottom: 15px;
     text-align: center;
+    /* background-color: #f1ff30; */
+    border-radius: 10px;
 }
 .item img {
-    width: 100%;
+    width: 80%;
     height: auto;
     border-radius: 50%;
+    margin-top: 21px;
 }
+.item p{
+    font-weight: 600;
+    font-size: 3rem;
+}
+@media screen and (max-width: 1080px){
+    .item p{
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width:768px){
+    .item p{
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 480px){
+    .item p{
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
+
 .people-choice {
     display: flex;
     justify-content: space-around;
     padding: 10px;
     background-color: #fff;
+    overflow: hidden;
 }
 .people-choice img {
     width: 48%;
     height: auto;
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .item {
         width: 30%;
     }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
     .item {
         width: 48%;
+        background-color: white;
     }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
+
+    .item {
+        background-color: white;
+    }
+}
+@media screen and (max-width: 480px) {
     header {
-        flex-direction: column;
+        position: relative;
+        flex-direction: row;
         text-align: center;
         visibility: visible;
     }
+    
+    .items {
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    .item .people-choice img {
+        width: 80%;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+        flex-direction: row;
+        text-align: center;
+        visibility: visible;
+    }
+    
     .items {
         flex-direction: row;
         align-items: center;
