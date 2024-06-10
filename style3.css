@@ -460,27 +460,26 @@ header a {
 }
 
 .menu-box{
-    padding: 5px 84px 51px 80px;
-    margin: 0rem 11rem 0rem 11rem;
+    padding: 5px 0px 51px 0px;
+    margin: 0rem 2rem 0rem 2rem;
 }
 @media screen and (max-width: 1080px){
     .menu-box{
-        padding: 15px 19px 51px 17px;
+        padding: 15px 1px 51px 1px;
         margin: 0rem 1rem 0rem 1rem;
     }
 }
 @media screen and (max-width:768px){
     .menu-box{
-        padding: 15px 19px 51px 17px;
+        padding: 15px 1px 51px 1px;
         margin: 0rem 1rem 0rem 1rem;
     }
 }
 @media screen and (max-width: 480px){
     .menu-box{
 
-        padding: 15px 19px 51px 17px;
+        padding: 15px 1px 51px 1px;
         margin: 0rem 1rem 0rem 1rem;
-
     }
 }
 
@@ -500,10 +499,10 @@ header a {
     border-radius: 10px;
 }
 .item img {
-    width: 60%;
+    width: 81%;
     height: auto;
     border-radius: 50%;
-    margin-top: 21px;
+    margin-top: 11px;
 }
 .item p{
     font-weight: 600;
