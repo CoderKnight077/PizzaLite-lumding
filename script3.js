@@ -11,14 +11,15 @@ toggler.addEventListener('click'  , ()  =>   {
 // text animation what are you craving for?
 
 document.addEventListener("DOMContentLoaded", () => {
-   const text = "What are you craving for?";
+   const text = "What are you craving for?😍 " ; // Sanjay :  I have added heart-eyes emoji here 
    let index = 0;
  
    const type = () => {
      if (index < text.length) {
        document.getElementById("animated-text").innerHTML += text.charAt(index);
        index++;
-       setTimeout(type, 150); // Adjust typing speed here
+       setTimeout(type, 70); // Adjust typing speed here
+       // Sanjay : I have updated the typing speed to 70 
      } else {
        // Optionally restart the animation
        setTimeout(() => {
@@ -143,3 +144,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderReviews();
 });
+
