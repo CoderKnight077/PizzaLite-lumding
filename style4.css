@@ -1,0 +1,100 @@
+
+
+.founder {
+
+
+    text-align: center;
+
+    color: rgb(216, 4, 4);
+
+    text-decoration: underline;
+
+
+
+}
+
+
+.img {
+
+
+    align-items: center;
+}
+
+
+.founder-image {
+
+    display: block;
+    margin: 0 auto;
+ 
+    border-radius: 50%;
+
+    width: 200PX;
+    height: 200px;
+
+
+
+
+}
+
+
+.Notes {
+
+    padding: 40px;
+}
+
+h1 {
+
+    padding: 10px;
+}
+
+.center {
+
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(224, 7, 7, 0.925);
+    border-radius: 8px;
+    background-color: #ffffff86;
+}
+
+
+.values, .testimonials {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #d41b35;
+    border-radius: 8px;
+}
+
+.testimonial p {
+    margin: 0;
+}
+
+.testimonial p:last-child {
+    margin-top: 10px;
+    font-style: italic;
+    color: black;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.center .big-letter {
+    font-size: 40px; /* Makes the letter very large */
+    font-weight: bold; /* Optional: makes the letter bold */
+    color: #d41b35; /* Optional: changes the color */
+    /* You can add more styles if needed */
+}
