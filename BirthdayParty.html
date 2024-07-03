@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Party - PizzaStore</title>
+    <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+    <section class="birthday-party">
+        <div class="container">
+            <div class="balloons">
+                <img src="red-balloon.png" alt="Red Balloon" class="red-balloon">
+                <img src="blue-balloon.png" alt="Blue Balloon" class="blue-balloon">
+            </div>
+            <h1 class="title">Birthday Party at PizzaStore</h1>
+
+            <p class="catchy-description">🎉 Make your special day unforgettable! Celebrate your birthday with delicious pizza, fun games, and great company at PizzaStore. 🎉</p>
+
+            <div class="video-placeholder">
+                <video width="100%" controls>
+                    <source src="birthday-party-video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        
+            
+            <div class="party-details">
+                <h2 class="party-packages-title">Party Packages</h2>
+                <ul>
+                    <li><strong>Basic Package:</strong> Includes 2 large pizzas, 1 cake, and decorations.</li>
+                    <li><strong>Deluxe Package:</strong> Includes 4 large pizzas, 2 cakes, decorations, and party favors.</li>
+                    <li><strong>Ultimate Package:</strong> Includes unlimited pizza, 3 cakes, decorations, party favors, and a special gift for the birthday person.</li>
+                </ul>
+            </div>
+
+            <div class="party-booking">
+                <h2>Book Your Party</h2>
+                <form action="submit_party_booking.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="package">Choose Package:</label>
+                    <select id="package" name="package" required>
+                        <option value="basic">Basic Package</option>
+                        <option value="deluxe">Deluxe Package</option>
+                        <option value="ultimate">Ultimate Package</option>
+                    </select>
+
+                    <button type="submit" class="book-now-button">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
