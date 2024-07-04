@@ -54,3 +54,38 @@ button {
     text-transform: uppercase;
     transition: transform 80ms ease-in;
 }
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    .form-container {
+        padding: 30px;
+    }
+
+    input {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    button {
+        padding: 10px 30px;
+    }
+}
