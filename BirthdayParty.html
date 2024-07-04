@@ -10,21 +10,21 @@
     <section class="birthday-party">
         <div class="container">
             <div class="balloons">
+                <br> <br> 
+                 <br>
+
                 <img src="red-balloon.png" alt="Red Balloon" class="red-balloon">
                 <img src="blue-balloon.png" alt="Blue Balloon" class="blue-balloon">
             </div>
             <h1 class="title">Birthday Party at PizzaStore</h1>
-
-            <p class="catchy-description">🎉 Make your birthday unforgettable with delicious pizza, fun games, and great company at PizzaStore! 🎉</p>
-
+            <p class="catchy-description">🎉 Make your special day unforgettable! Celebrate your birthday with delicious pizza, fun games, and great company at PizzaStore. 🎉</p>
             <div class="video-placeholder">
-                <video width="100%" controls>
+                <video id="birthdayVideo" width="100%">
                     <source src="birthday-party-video.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+                <button id="videoControl" class="video-control">Play Video</button>
             </div>
-        
-            
             <div class="party-details">
                 <h2 class="party-packages-title">Party Packages</h2>
                 <ul>
@@ -33,30 +33,42 @@
                     <li><strong>Ultimate Package:</strong> Includes unlimited pizza, 3 cakes, decorations, party favors, and a special gift for the birthday person.</li>
                 </ul>
             </div>
-
             <div class="party-booking">
                 <h2>Book Your Party</h2>
                 <form action="submit_party_booking.php" method="post">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
-
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
-
                     <label for="date">Date:</label>
                     <input type="date" id="date" name="date" required>
-
                     <label for="package">Choose Package:</label>
                     <select id="package" name="package" required>
                         <option value="basic">Basic Package</option>
                         <option value="deluxe">Deluxe Package</option>
                         <option value="ultimate">Ultimate Package</option>
                     </select>
-
                     <button type="submit" class="book-now-button">Book Now</button>
                 </form>
             </div>
         </div>
     </section>
+
+    <script>
+        const video = document.getElementById('birthdayVideo');
+        const controlButton = document.getElementById('videoControl');
+
+        controlButton.addEventListener('click', function() {
+            if (video.paused) {
+                video.muted = false;
+                video.play();
+                controlButton.textContent = 'Pause Video';
+            } else {
+                video.pause();
+                controlButton.textContent = 'Play Video';
+            }
+        });
+    </script>
 </body>
 </html>
+
