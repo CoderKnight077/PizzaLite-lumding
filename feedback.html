@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Feedback - PizzaStore</title>
+    <link rel="stylesheet" href="styles8.css">
+</head>
+<body>
+    <section class="feedback-section">
+        <div class="feedback-container">
+            <h1 class="feedback-title">We Value Your Feedback!</h1>
+            <p class="feedback-description">Your feedback helps us improve and provide the best service possible. Please take a moment to share your thoughts.</p>
+            <p class="feedback-title"> আমাদের পিজা খেয়ে কিরকম লাগলো ? 😍
+                <br> <br> নীচের বক্স এ এক্ষুনি জানান !    </p>
+            <form class="feedback-form" action="submit_feedback.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                
+                <label for="contact">Email/Phone Number:</label>
+                <input type="text" id="contact" name="contact" required pattern="^\S+@\S+\.\S+|^(\+?\d{1,4}?[\s-.\u00A0]?)?(\(?\d{3}\)?[\s-.\u00A0]?){1,2}(\d{3}[\s-.\u00A0]?\d{4})$" title="Please enter a valid email address or phone number">
+                
+                <label for="rating">Rating:</label>
+                <div class="rating">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" title="5 stars">★</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 stars">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="3 stars">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 stars">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 star">★</label>
+                </div>
+                
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" required></textarea>
+                
+                <button type="submit" class="submit-feedback-button">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
