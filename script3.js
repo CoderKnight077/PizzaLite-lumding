@@ -140,8 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
     currentPage++;
     renderReviews();
   });
-
-
   renderReviews();
 });
 
