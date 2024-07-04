@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Orders - PizzaStore</title>
+    <link rel="stylesheet" href="styles7.css">
+</head>
+<body>
+    <section class="large-order">
+        <div class="container">
+            <h1 class="title">Large Orders at PizzaStore</h1>
+            <p class="catchy-description">🍕 Planning a big event? We've got you covered with our delicious large order options! 🍕</p>
+            <div class="image-container">
+                <img src="largeOrders.png" alt="Large Order" class="large-order-image">
+            </div>
+            
+            <div class="order-details">
+                <h2 class="order-packages-title">Our Large Order Packages</h2>
+                <ul>
+                    <li><strong>Event Special:</strong> Includes 10 large pizzas, 5 side dishes, and beverages for 50 people.</li>
+                    <li><strong>Corporate Feast:</strong> Includes 20 large pizzas, 10 side dishes, beverages, and desserts for 100 people.</li>
+                    <li><strong>Ultimate Party:</strong> Includes 50 large pizzas, 20 side dishes, beverages, desserts, and custom decorations for 250 people.</li>
+                </ul>
+            </div>
+
+            <div class="order-booking">
+                <h2>Place Your Large Order</h2>
+                <form action="submit_large_order.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="date">Event Date:</label>
+                    <input type="date" id="date" name="date" required>
+
+                    <label for="package">Choose Package:</label>
+                    <select id="package" name="package" required>
+                        <option value="event">Event Special</option>
+                        <option value="corporate">Corporate Feast</option>
+                        <option value="ultimate">Ultimate Party</option>
+                    </select>
+
+                    <button type="submit" class="place-order-button">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
