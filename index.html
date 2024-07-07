@@ -153,38 +153,47 @@
 </div>
 
 
-<div class="review-section">
-  <h3>Review with Images</h3>
-  <div class="review-carousel">
-    <button class="carousel-button prev">&lt;</button>
-    <div class="review-images">
-      <div class="image-box">Image 1</div>
-      <div class="image-box">Image 2</div>
-      <div class="image-box">Image 3</div>
-      <div class="image-box">See + More</div>
-    </div>
-    <button class="carousel-button next">&gt;</button>
+
+<section class="review-section">
+  <div class="container">
+      <h1 class="title">Review with Images</h1>
+      <div class="review-carousel">
+          <button class="carousel-button prev">&lt;</button>
+          <div class="review-images">
+              <div class="image-box">Image 1</div>
+              <div class="image-box">Image 2</div>
+              <div class="image-box">Image 3</div>
+              <div class="image-box">See + More</div>
+          </div>
+          <button class="carousel-button next">&gt;</button>
+      </div>
   </div>
-</div>
-<div class="review-container">
-  <h2>Leave a Review</h2>
-  <form id="review-form">
-    <div class="rating">
-      <span class="star" data-value="5">&#9733;</span>
-      <span class="star" data-value="4">&#9733;</span>
-      <span class="star" data-value="3">&#9733;</span>
-      <span class="star" data-value="2">&#9733;</span>
-      <span class="star" data-value="1">&#9733;</span>
-    </div>
-    <textarea id="review-text" placeholder="Write your review here..."></textarea>
-    <button type="submit">Submit Review</button>
-  </form>
-  <div id="reviews">
-    <h2>Reviews</h2>
-    <div id="reviews-list"></div>
-    <button id="see-more" style="display: none;">See More</button>
+
+  <div class="review-container">
+      <h2 class="title">Leave a Review</h2>
+      <form id="review-form">
+          <div class="rating">
+              <span class="star" data-value="1">&#9733;</span>
+              <span class="star" data-value="2">&#9733;</span>
+              <span class="star" data-value="3">&#9733;</span>
+              <span class="star" data-value="4">&#9733;</span>
+              <span class="star" data-value="5">&#9733;</span>
+          </div>
+          <input type="text" id="reviewer-name" placeholder="Your Name" required>
+          <textarea id="review-text" placeholder="Write your review here..." required></textarea>
+          <input type="file" id="review-image" accept="image/*">
+          <button type="submit">Submit Review</button>
+      </form>
+      <div id="reviews">
+          <h2 class="title">Reviews</h2>
+          <div id="reviews-list"></div>
+          <button id="see-more" style="display: none;">See More</button>
+      </div>
   </div>
-</div>
+
+</section>
+
+<script src="script2.js"></script>
 <div class="final-link">
   <img src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg" alt="insta" srcset="">
   <img src="https://www.foodiesfeed.com/wp-content/uploads/2023/06/burger-with-melted-cheese.jpg" alt="facebook" srcset="">
