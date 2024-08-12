@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Your Account </title>
+    <link rel="stylesheet" href="style20.css">
+    <script src="account.js"></script>
+</head>
+<body>
+    <div class="account-section">
+        <h2>Your Account</h2>
+        <div class="account-info">
+            <div class="account-details">
+                <h3>My Profile</h3>
+                <div class="detail-item">
+                    <span class="detail-title">Name:</span>
+                    <input type="text" id="account-name" value="John Doe" disabled>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-title">Email:</span>
+                    <input type="email" id="account-email" value="johndoe@example.com" disabled>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-title">Phone Number:</span>
+                    <input type="tel" id="account-phone" value="123-456-7890" disabled>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-title">Address:</span>
+                    <input type="text" id="account-address" value="123 Pizza Street, Food City" disabled>
+                </div>
+                <button class="account-btn" id="edit-btn">Edit</button>
+                <button class="account-btn" id="save-btn" style="display:none;">Save</button>
+            </div>
+            <div class="account-section-divider"></div>
+            <div class="orders-section">
+                <h3>Orders</h3>
+                <button class="account-btn">View Order History</button>
+            </div>
+            <div class="account-section-divider"></div>
+            <div class="login-security-section">
+                <h3>Login & Security</h3>
+                <button class="account-btn">Change Password</button>
+                <button class="account-btn">Manage Two-Factor Authentication</button>
+            </div>
+            <div class="account-section-divider"></div>
+            <div class="payment-section">
+                <h3>Payment Methods</h3>
+                <button class="account-btn">Manage Payment Methods</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Confirmation Prompt -->
+    <div id="confirmation-prompt" class="confirmation-prompt">
+        <div class="prompt-content">
+            <p>Are you sure you want to save the changes?</p>
+            <button id="yes-btn" class="account-btn">Yes</button>
+            <button id="no-btn" class="account-btn">No</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
