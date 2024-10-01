@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - Pizzalite</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: white; /* No background color */
+        }
+
+        #order-history {
+            background-color: white; /* White background for the section */
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            padding: 20px;
+            max-width: 600px;
+            margin: 20px auto; /* Centering the section */
+            border: 2px solid #d24d24; /* Red border to match pizza theme */
+            opacity: 0; /* Initially hidden for animation */
+            animation: flyIn 1s forwards; /* Animation for flying effect */
+        }
+
+        @keyframes flyIn {
+            0% {
+                transform: translateY(-100vh); /* Start above the viewport */
+                opacity: 0; /* Invisible */
+            }
+            100% {
+                transform: translateY(0); /* End at original position */
+                opacity: 1; /* Fully visible */
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: #d24d24; /* Pizzalite red */
+            font-size: 24px; /* Font size for the heading */
+            margin-bottom: 20px; /* Spacing below the heading */
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; /* Spacing below the search */
+        }
+
+        .search-container input {
+            padding: 10px;
+            width: 70%; /* Width of the search input */
+            border: 2px solid #d24d24; /* Border matching the theme */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .order-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-height: 400px; /* Height to enable scrolling */
+            overflow-y: auto; /* Vertical scrolling */
+            padding-right: 5px; /* Space for scrollbar */
+        }
+
+        .order-item {
+            display: flex;
+            align-items: center;
+            border: 1px solid #d24d24; /* Red border */
+            border-radius: 8px;
+            padding: 10px;
+            transition: background-color 0.3s;
+            justify-content: space-between; /* Space between order details and buttons */
+        }
+
+        .order-item:hover {
+            background-color: rgb(247, 77, 77); /* Yellow hover effect */
+        }
+
+        .order-item img {
+            width: 70px; /* Image size */
+            height: 70px; /* Image size */
+            border-radius: 8px;
+            margin-right: 15px; /* Space between image and text */
+        }
+
+        .order-details {
+            flex-grow: 1; /* Take available space */
+        }
+
+        .order-buttons {
+            display: flex;
+            gap: 5px; /* Space between buttons */
+        }
+
+        @keyframes ashEffect {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px) scale(1.2);
+            }
+        }
+
+        #load-more {
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #d24d24; /* Pizzalite red */
+            color: #fff; /* White text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%; /* Full width button */
+            font-size: 16px; /* Font size for button */
+            position: relative; /* Needed for the text to be positioned absolutely */
+        }
+
+        #load-more span {
+            display: inline-block; /* To allow transform animations */
+            transition: opacity 0.5s ease; /* Smooth transition for opacity */
+        }
+
+        #load-more:hover {
+            background-color: #b22222; /* Darker red on hover */
+        }
+
+        .no-results {
+            text-align: center;
+            color: #d24d24; /* Pizzalite red */
+            margin-top: 20px; /* Spacing above the message */
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+
+<section id="order-history">
+    <h2>Order History</h2>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search Order...">
+    </div>
+    <div class="order-container">
+        <div class="order-item">
+            <img src="path/to/image1.jpg" alt="Product 1">
+            <div class="order-details">
+                <h3>Product Name 1</h3>
+                <p>Last Order Date: <span>2024-09-30</span></p>
+            </div>
+            <div class="order-buttons">
+                <button>Buy Again </button>
+                <button>Cancel Order</button>
+            </div>
+        </div>
+        <div class="order-item">
+            <img src="path/to/image2.jpg" alt="Product 2">
+            <div class="order-details">
+                <h3>Product Name 2</h3>
+                <p>Last Order Date: <span>2024-09-28</span></p>
+            </div>
+            <div class="order-buttons">
+                <button>Buy Again</button>
+                <button>Cancel Order</button>
+            </div>
+        </div>
+        <div class="order-item">
+            <img src="path/to/image3.jpg" alt="Product 3">
+            <div class="order-details">
+                <h3>Product Name 3</h3>
+                <p>Last Order Date: <span>2024-09-25</span></p>
+            </div>
+            <div class="order-buttons">
+                <button>Buy Again</button>
+                <button>Cancel Order</button>
+            </div>
+        </div>
+        <div class="order-item">
+            <img src="path/to/image4.jpg" alt="Product 4">
+            <div class="order-details">
+                <h3>Product Name 4</h3>
+                <p>Last Order Date: <span>2024-09-20</span></p>
+            </div>
+            <div class="order-buttons">
+                <button>Buy Again</button>
+                <button>Cancel Order</button>
+            </div>
+        </div>
+        <div class="order-item">
+            <img src="path/to/image5.jpg" alt="Product 5">
+            <div class="order-details">
+                <h3>Product Name 5</h3>
+                <p>Last Order Date: <span>2024-09-15</span></p>
+            </div>
+            <div class="order-buttons">
+                <button>Buy Again </button>
+                <button>Cancel Order</button>
+            </div>
+        </div>
+    </div>
+    <div class="no-results" id="no-results-message">There is no name relevant to this</div>
+    <button id="load-more"><span>Load More</span></button>
+</section>
+
+<script>
+    const loadMoreButton = document.getElementById('load-more');
+    const orderContainer = document.querySelector('.order-container');
+    const searchInput = document.getElementById('search-input');
+    const noResultsMessage = document.getElementById('no-results-message');
+
+    loadMoreButton.addEventListener('click', () => {
+        const newOrders = [
+            {
+                name: "Product Name 6",
+                date: "2024-09-10",
+                image: "path/to/image6.jpg"
+            },
+            {
+                name: "Product Name 7",
+                date: "2024-09-05",
+                image: "path/to/image7.jpg"
+            },
+            {
+                name: "Product Name 8",
+                date: "2024-09-01",
+                image: "path/to/image8.jpg"
+            },
+            {
+                name: "Product Name 9",
+                date: "2024-08-28",
+                image: "path/to/image9.jpg"
+            },
+            {
+                name: "Product Name 10",
+                date: "2024-08-20",
+                image: "path/to/image10.jpg"
+            }
+        ];
+
+        // Add more orders to the DOM
+        newOrders.forEach(order => {
+            const orderItem = document.createElement('div');
+            orderItem.className = 'order-item';
+            orderItem.innerHTML = `
+                <img src="${order.image}" alt="${order.name}">
+                <div class="order-details">
+                    <h3>${order.name}</h3>
+                    <p>Last Order Date: <span>${order.date}</span></p>
+                </div>
+                <div class="order-buttons">
+                    <button>Buy Again</button>
+                    <button>Cancel Order</button>
+                </div>
+            `;
+            orderContainer.appendChild(orderItem);
+        });
+    });
+
+    searchInput.addEventListener('input', () => {
+        const searchValue = searchInput.value.toLowerCase();
+        const orderItems = document.querySelectorAll('.order-item');
+        let hasResults = false;
+
+        orderItems.forEach(item => {
+            const orderName = item.querySelector('.order-details h3').innerText.toLowerCase();
+            if (orderName.includes(searchValue)) {
+                item.style.display = 'flex'; // Show matching order
+                hasResults = true; // At least one match found
+            } else {
+                item.style.display = 'none'; // Hide non-matching order
+            }
+        });
+
+        // Show or hide the no results message
+        if (hasResults) {
+            noResultsMessage.style.display = 'none'; // Hide message if there are results
+        } else {
+            noResultsMessage.style.display = 'block'; // Show message if no results
+        }
+    });
+</script>
+
+</body>
+</html>
