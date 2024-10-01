@@ -285,30 +285,30 @@
         });
     });
 
-    searchInput.addEventListener('input', () => {
-        const searchValue = searchInput.value.trim().toLowerCase(); // Trim whitespace and convert to lowercase
-        const orderItems = document.querySelectorAll('.order-item');
-        let hasResults = false;
+      searchInput.addEventListener('input', () => {
+    const searchValue = searchInput.value.trim().toLowerCase().replace(/\s+/g, ''); // Remove spaces and convert to lowercase
+    const orderItems = document.querySelectorAll('.order-item');
+    let hasResults = false;
 
-        orderItems.forEach(item => {
-            const orderName = item.querySelector('.order-details h3').innerText.toLowerCase();
-            
-            // Check if the search value is empty or if it matches the order name
-            if (searchValue === '' || orderName.includes(searchValue)) {
-                item.style.display = 'flex'; // Show matching order
-                hasResults = true; // At least one match found
-            } else {
-                item.style.display = 'none'; // Hide non-matching order
-            }
-        });
-
-        // Show or hide the no results message
-        if (hasResults) {
-            noResultsMessage.style.display = 'none'; // Hide message if there are results
+    orderItems.forEach(item => {
+        const orderName = item.querySelector('.order-details h3').innerText.toLowerCase().replace(/\s+/g, ''); // Remove spaces from order name
+        
+        // Check if the search value is empty or if it matches the order name (without spaces)
+        if (searchValue === '' || orderName.includes(searchValue)) {
+            item.style.display = 'flex'; // Show matching order
+            hasResults = true; // At least one match found
         } else {
-            noResultsMessage.style.display = 'block'; // Show message if no results
+            item.style.display = 'none'; // Hide non-matching order
         }
     });
+
+    // Show or hide the no results message
+    if (hasResults) {
+        noResultsMessage.style.display = 'none'; // Hide message if there are results
+    } else {
+        noResultsMessage.style.display = 'block'; // Show message if no results
+    }
+});
 </script>
 
 
