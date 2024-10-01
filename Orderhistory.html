@@ -286,13 +286,15 @@
     });
 
     searchInput.addEventListener('input', () => {
-        const searchValue = searchInput.value.toLowerCase();
+        const searchValue = searchInput.value.trim().toLowerCase(); // Trim whitespace and convert to lowercase
         const orderItems = document.querySelectorAll('.order-item');
         let hasResults = false;
 
         orderItems.forEach(item => {
             const orderName = item.querySelector('.order-details h3').innerText.toLowerCase();
-            if (orderName.includes(searchValue)) {
+            
+            // Check if the search value is empty or if it matches the order name
+            if (searchValue === '' || orderName.includes(searchValue)) {
                 item.style.display = 'flex'; // Show matching order
                 hasResults = true; // At least one match found
             } else {
@@ -308,6 +310,7 @@
         }
     });
 </script>
+
 
 </body>
 </html>
