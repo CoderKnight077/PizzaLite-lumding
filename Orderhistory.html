@@ -133,6 +133,45 @@
             margin-top: 20px; /* Spacing above the message */
             display: none; /* Initially hidden */
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .search-container input {
+                width: 90%; /* Wider input on smaller screens */
+            }
+
+            .order-item {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: flex-start; /* Align items to the start */
+            }
+
+            .order-item img {
+                margin-bottom: 10px; /* Space below the image */
+            }
+
+            .order-buttons {
+                width: 100%; /* Full width buttons */
+                justify-content: space-between; /* Space buttons evenly */
+            }
+
+            #load-more {
+                padding: 15px; /* Larger padding for the button */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 20px; /* Smaller font for smaller screens */
+            }
+
+            .order-item {
+                padding: 15px; /* Increased padding for touch targets */
+            }
+
+            .search-container input {
+                padding: 12px; /* More padding for easier interaction */
+            }
+        }
     </style>
 </head>
 <body>
@@ -150,7 +189,7 @@
                 <p>Last Order Date: <span>2024-09-30</span></p>
             </div>
             <div class="order-buttons">
-                <button>Buy Again </button>
+                <button>Buy Again</button>
                 <button>Cancel Order</button>
             </div>
         </div>
@@ -194,7 +233,7 @@
                 <p>Last Order Date: <span>2024-09-15</span></p>
             </div>
             <div class="order-buttons">
-                <button>Buy Again </button>
+                <button>Buy Again</button>
                 <button>Cancel Order</button>
             </div>
         </div>
@@ -225,20 +264,9 @@
                 name: "Product Name 8",
                 date: "2024-09-01",
                 image: "path/to/image8.jpg"
-            },
-            {
-                name: "Product Name 9",
-                date: "2024-08-28",
-                image: "path/to/image9.jpg"
-            },
-            {
-                name: "Product Name 10",
-                date: "2024-08-20",
-                image: "path/to/image10.jpg"
             }
         ];
 
-        // Add more orders to the DOM
         newOrders.forEach(order => {
             const orderItem = document.createElement('div');
             orderItem.className = 'order-item';
@@ -283,3 +311,4 @@
 
 </body>
 </html>
+
