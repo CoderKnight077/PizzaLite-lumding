@@ -241,7 +241,6 @@
     <div class="no-results" id="no-results-message">There is no name relevant to this</div>
     <button id="load-more"><span>Load More</span></button>
 </section>
-
 <script>
     const loadMoreButton = document.getElementById('load-more');
     const orderContainer = document.querySelector('.order-container');
@@ -285,7 +284,7 @@
         });
     });
 
-      searchInput.addEventListener('input', () => {
+    searchInput.addEventListener('input', () => {
     const searchValue = searchInput.value.trim().toLowerCase().replace(/\s+/g, ''); // Remove spaces and convert to lowercase
     const orderItems = document.querySelectorAll('.order-item');
     let hasResults = false;
@@ -309,6 +308,7 @@
         noResultsMessage.style.display = 'block'; // Show message if no results
     }
 });
+
 </script>
 
 
